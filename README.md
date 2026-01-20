@@ -1,20 +1,52 @@
-<<<<<<< HEAD
-# React + Vite
+# Govt Portal React Website
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A React + Vite based web application inspired by the Directorate of Technical Education (DTE) portal.  
+This project demonstrates a government-style informational website with multiple sections, routing, and reusable components.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🚀 Tech Stack
+- React (Vite)
+- JavaScript (ES6+)
+- Bootstrap
+- React Router DOM
+- HTML5 & CSS3
 
-## React Compiler
+---
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## 📁 Project Features
+- Responsive Navbar and Footer
+- Director’s Desk with “Read More” page navigation
+- News Panel with auto-scroll
+- Notice Board and Online Systems sections
+- Image sliders and important links
+- Clean component-based structure
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
-=======
-# dte-website-react
->>>>>>> 94f148bcf6f2ac8f08a14d24e3cec9c78cbc4d40
+## 🖥️ Project Setup (Run Locally)
+
+### 1️⃣ Clone the repository
+```bash
+git clone https://github.com/Jayesh4090desale/govt-portal-react.git
+2️⃣ Go to project directory
+bash
+Copy code
+cd govt-portal-react
+3️⃣ Install dependencies
+bash
+Copy code
+npm install
+4️⃣ Start the development server
+bash
+Copy code
+npm run dev
+The app will run on:
+
+arduino
+Copy code
+http://localhost:5173
+📦 Build for Production
+bash
+Copy code
+npm run build
