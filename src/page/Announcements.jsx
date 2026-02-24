@@ -1,7 +1,7 @@
 import React from "react";
 import df from "../assets/df.png";
 import es from "../assets/es.jpeg";
-import ap from "../assets/ap.png";
+import ap from "../assets/Pawerjpg.jpg";
 import cp from "../assets/cp.jpeg";
 import ins from "../assets/in.png";
 import vr from "../assets/vr.png";
@@ -54,7 +54,7 @@ const Announcements = () => {
           <div className="col-md-4">
             <LeaderCard
               img={ap}
-              name="Shri. Ajit Pawar"
+              name="Shrimati Sunetra Ajit Pawar"
               post="Hon. Dy. Chief Minister"
             />
           </div>

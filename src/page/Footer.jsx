@@ -27,7 +27,7 @@ const Footer = () => {
             </p>
 
             <div className="d-flex gap-2 flex-wrap">
-              <span className="border bg-white px-2 py-1">AChecker WCAG 2-AA</span>
+              <span className="border bg-white px-2 py-1">AChecker WCAG 2-AA</span> 
               <span className="border bg-white px-2 py-1">W3C WCAG 2.0</span>
               <span className="border bg-white px-2 py-1">W3C XHTML 1.0</span>
               <span className="border bg-white px-2 py-1">W3C CSS</span>

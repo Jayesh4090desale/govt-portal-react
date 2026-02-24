@@ -1,22 +1,24 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-// import './App.css'
-import Navbar from './page/Navbar'
-import Main from './page/Main'
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Navbar from "./page/Navbar";
+import Main from "./page/Main";
 import Footer from "./page/Footer";
-//import DirectorDeskPage from "./page/DirectorDeskPage";
-
+import DirectorDeskPage from "./page/DirectorDeskPage";
+import VisionMission from "./page/VisionMission";
 
 function App() {
-
   return (
-    <>
-      <Navbar></Navbar>
-      <Main></Main>
+    <Router>
+      <Navbar />
+
+      <Routes>
+        <Route path="/" element={<Main />} />
+        <Route path="/director-desk" element={<DirectorDeskPage />} />
+        <Route path="/about/vision-mission" element={<VisionMission />} />
+      </Routes>
+
       <Footer />
-    </>
-  )
+    </Router>
+  );
 }
 
-export default App
+export default App;
