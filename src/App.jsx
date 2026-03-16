@@ -8,6 +8,7 @@ import OrgStructure from "./page/OrgStructure";
 import WhosWho from "./page/WhosWho";
 import NepGovtResolution from "./page/NepGovtResolution";
 import AboutNep from "./page/AboutNep";
+import DteSearchInstitute from "./page/DteSearchInstitute";
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
         <Route path="/about/whos-who" element={<WhosWho />} />
         <Route path="/quality/nep-gr" element={<NepGovtResolution />} />
         <Route path="/quality/about-nep" element={<AboutNep />} />
+        <Route path="/admission/dte-search" element={<DteSearchInstitute />} />
 
       </Routes>
 

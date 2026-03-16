@@ -115,6 +115,9 @@ const Navbar = () => {
                     <li><Link className="dropdown-item" to="/admission/dte-search">DTE Search Institute</Link></li>
                     <li><Link className="dropdown-item" to="/admission/post-ssc-2025">Post SSC Diploma 2025</Link></li>
                     <li><Link className="dropdown-item" to="/admission/direct-second-year-2025">Direct Second Year Diploma 2025</Link></li>
+                    <li><Link className="dropdown-item" to="/admission/post-hsc-pharmacy-2025">Post HSC Diploma In Pharmacy_2025</Link></li>
+                    <li><Link className="dropdown-item" to="/admission/post-hsc-hmct-2025">Post HSC Diploma In HMCT_2025</Link></li>
+                    <li><Link className="dropdown-item" to="/admission/post-hsc-surface-coating-2025">Post HSC Diploma In Surface Coating Technology_2025</Link></li>
                   </ul>
                 </li>
 
