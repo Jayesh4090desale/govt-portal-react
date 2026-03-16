@@ -53,11 +53,15 @@ const ImportantLinks = () => {
         {/* Scrollable Area */}
         <div
           ref={scrollRef}
+          className="important-links-wrapper"
           style={{
             display: "flex",
             gap: "20px",
-            overflowX: "hidden",
-            width: "450px", // 👈 fits exactly 3 items
+            overflowX: "auto",
+            scrollBehavior: "smooth",
+            width: "100%",
+            maxWidth: "600px",
+            padding: "10px"
           }}
         >
           {images.map((img, index) => (

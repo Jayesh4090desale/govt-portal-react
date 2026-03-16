@@ -28,26 +28,26 @@ const NoticeBoard = () => {
     <div className="container my-5">
       <div className="border">
 
-        {/* Tabs */}
-        <div className="d-flex bg-danger text-white fw-bold">
-          <div className="px-3 py-2 border-end">Circular/Office Order</div>
-          <div className="px-3 py-2 border-end">Seminar/Conference/Workshop</div>
-          <div className="px-3 py-2 border-end">Trainings</div>
-          <div className="px-3 py-2 border-end">Government Resolutions</div>
-          <div className="px-3 py-2 border-end">Important Act</div>
-          <div className="px-3 py-2">Tenders</div>
+        {/* Tabs - Make them scrollable or wrap */}
+        <div className="d-flex flex-wrap bg-danger text-white fw-bold small">
+          <div className="px-3 py-2 border-end border-bottom flex-fill text-center">Circular/Office Order</div>
+          <div className="px-3 py-2 border-end border-bottom flex-fill text-center">Seminar/Conference/Workshop</div>
+          <div className="px-3 py-2 border-end border-bottom flex-fill text-center">Trainings</div>
+          <div className="px-3 py-2 border-end border-bottom flex-fill text-center">Government Resolutions</div>
+          <div className="px-3 py-2 border-end border-bottom flex-fill text-center">Important Act</div>
+          <div className="px-3 py-2 border-bottom flex-fill text-center">Tenders</div>
         </div>
 
-        {/* Scrollable Table */}
-        <div style={{ maxHeight: "420px", overflowY: "auto" }}>
+        {/* Scrollable Table - Using table-responsive */}
+        <div className="table-responsive" style={{ maxHeight: "420px", overflowY: "auto" }}>
           <table className="table table-bordered mb-0">
             <thead className="table-danger sticky-top">
               <tr>
-                <th style={{ width: "70px" }}>Sr. No</th>
-                <th style={{ width: "140px" }}>Publish Date</th>
-                <th>News</th>
-                <th style={{ width: "110px" }}>Download</th>
-                <th style={{ width: "100px" }}>Size</th>
+                <th style={{ minWidth: "70px" }}>Sr. No</th>
+                <th style={{ minWidth: "140px" }}>Publish Date</th>
+                <th style={{ minWidth: "250px" }}>News</th>
+                <th style={{ minWidth: "110px" }}>Download</th>
+                <th style={{ minWidth: "100px" }}>Size</th>
               </tr>
             </thead>
 
@@ -69,7 +69,7 @@ const NoticeBoard = () => {
           </table>
         </div>
 
-        <div className="p-2 fw-bold">Read All</div>
+        <div className="p-2 fw-bold text-center border-top">Read All</div>
       </div>
     </div>
   );

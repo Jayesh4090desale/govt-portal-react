@@ -56,6 +56,12 @@ export default function Slider() {
           height: 380px;
           object-fit: cover;
         }
+
+        @media (max-width: 768px) {
+          .slider-height, .slider-img {
+            height: 200px;
+          }
+        }
       `}</style>
     </div>
   );

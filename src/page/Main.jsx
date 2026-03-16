@@ -12,10 +12,12 @@ export default function Main() {
       <Announcements />
       <Slider />
       <Director />
-      <NewsPanel /> 
+      <NewsPanel />
       <OnlineSystems />
       <NoticeBoard />
       <ImportantLinks />
+
     </>
   );
 }
+                
