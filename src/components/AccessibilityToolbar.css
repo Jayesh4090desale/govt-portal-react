@@ -1,0 +1,187 @@
+/* ─── Accessibility Toolbar ─────────────────────────────── */
+.acc-toolbar {
+  display: flex;
+  align-items: center;
+  background: #ffffff;
+  border-bottom: 3px solid #fd7e14;
+  padding: 4px 12px;
+  gap: 0;
+  flex-wrap: wrap;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.08);
+}
+
+/* Skip link (hidden until focused) */
+.acc-skip {
+  position: absolute;
+  left: -9999px;
+  top: auto;
+  background: #000;
+  color: #a49393;
+  padding: 6px 14px;
+  font-size: 13px;
+  font-weight: 600;
+  z-index: 10000;
+  border-radius: 0 0 4px 0;
+  text-decoration: none;
+}
+
+.acc-skip:focus {
+  position: static;
+  left: auto;
+}
+
+/* Vertical divider */
+.acc-divider {
+  width: 1px;
+  height: 28px;
+  background: #dee2e6;
+  margin: 0 2px;
+  flex-shrink: 0;
+}
+
+/* Generic toolbar button */
+.acc-btn {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  color: #333;
+  padding: 6px 10px;
+  border-radius: 4px;
+  transition: background 0.18s, color 0.18s;
+  white-space: nowrap;
+  font-family: inherit;
+}
+
+.acc-btn:hover {
+  background: #f1f3f5;
+  color: #000;
+}
+
+.acc-btn--active {
+  color: #fd7e14;
+  background: #fff3e0;
+}
+
+/* Pulse ring when speaking */
+.acc-pulse {
+  position: absolute;
+  top: 4px;
+  right: 6px;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #e74c3c;
+  animation: accPulse 1s infinite;
+}
+
+@keyframes accPulse {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+
+  50% {
+    transform: scale(1.5);
+    opacity: 0.6;
+  }
+
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+/* ─── Font dropdown ──────────────────────────────── */
+.acc-font-group {
+  position: relative;
+  display: inline-flex;
+}
+
+.acc-font-label {
+  gap: 2px;
+}
+
+.acc-font-dropdown {
+  position: absolute;
+  top: calc(100% + 4px);
+  left: 0;
+  background: #fff;
+  border: 1px solid #dee2e6;
+  border-radius: 6px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12);
+  display: flex;
+  flex-direction: column;
+  min-width: 120px;
+  z-index: 10001;
+  overflow: hidden;
+}
+
+.acc-dropdown-btn {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: none;
+  border: none;
+  padding: 8px 14px;
+  cursor: pointer;
+  color: #333;
+  transition: background 0.15s;
+  font-family: inherit;
+}
+
+.acc-dropdown-btn:hover {
+  background: #f8f9fa;
+  color: #fd7e14;
+}
+
+.acc-dropdown-label {
+  font-size: 13px;
+  color: #555;
+}
+
+/* ─── Color swatches ─────────────────────────────── */
+.acc-colors {
+  display: inline-flex;
+  align-items: center;
+  gap: 3px;
+  padding: 0 8px;
+}
+
+.acc-swatch {
+  width: 22px;
+  height: 22px;
+  border-radius: 3px;
+  border: 2px solid transparent;
+  cursor: pointer;
+  transition: transform 0.15s, border-color 0.15s;
+  padding: 0;
+  flex-shrink: 0;
+}
+
+.acc-swatch:hover {
+  transform: scale(1.15);
+  border-color: #333;
+}
+
+.acc-swatch--active {
+  border-color: #000;
+  transform: scale(1.1);
+  box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.25);
+}
+
+/* ─── Language button ────────────────────────────── */
+.acc-lang {
+  gap: 3px;
+  font-size: 13px;
+  border: 1px solid #dee2e6 !important;
+  border-radius: 4px;
+  padding: 4px 8px;
+}
+
+.acc-lang:hover {
+  border-color: #adb5bd !important;
+}

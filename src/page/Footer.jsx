@@ -1,6 +1,8 @@
 import React from "react";
+import { useAccessibility } from "../context/AccessibilityContext";
 
 const Footer = () => {
+  const { themeColor } = useAccessibility();
   const links = [
     "Sitemap", "Help", "Terms And Conditions", "Disclaimer", "RTI", "Copyright Policy",
     "CMAP policy", "CAP Policy", "CRP Policy", "Contingency Management Plan",
@@ -10,7 +12,7 @@ const Footer = () => {
   ];
 
   return (
-    <footer className="mt-auto" style={{ backgroundColor: "#f44336", color: "#000" }}>
+    <footer className="mt-auto" style={{ backgroundColor: themeColor.footer, color: "#000", transition: "background-color 0.4s ease" }}>
       <div className="container py-4">
 
         {/* Top Links */}

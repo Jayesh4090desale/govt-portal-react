@@ -2,9 +2,12 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import logo from "../assets/logo1.gif";
 import sj from "../assets/sj.png";
+import { useAccessibility } from "../context/AccessibilityContext";
+import AccessibilityToolbar from "../components/AccessibilityToolbar";
 
 const Navbar = () => {
   const [darkMode, setDarkMode] = useState(false);
+  const { themeColor } = useAccessibility();
 
   const toggleTheme = () => {
     setDarkMode(!darkMode);
@@ -12,8 +15,12 @@ const Navbar = () => {
   };
 
   return (
-    <>
-      {/* TOP BAR */}
+    /* Notice: No position: sticky here, so it scrolls away normally! */
+    <div>
+      {/* ── ACCESSIBILITY TOOLBAR (top of header) ── */}
+      <AccessibilityToolbar />
+
+      {/* ── TOP BAR ── */}
       <div className="bg-white border-bottom py-2">
         <div className="container d-flex flex-column flex-md-row align-items-center justify-content-between gap-2">
           <div className="d-flex align-items-center text-center text-md-start">
@@ -24,7 +31,7 @@ const Navbar = () => {
             <div className="vr d-none d-md-block mx-2"></div>
             <div className="ps-3 d-none d-md-block">
               <div className="fw-bold mb-0" style={{ fontSize: "0.9rem" }}>उच्च व तंत्रशिक्षण विभाग</div>
-              <div className="text-muted" style={{ fontSize: "0.75rem" }}>Higher & Technical Education Department</div>
+              <div className="text-muted" style={{ fontSize: "0.75rem" }}>Higher &amp; Technical Education Department</div>
             </div>
           </div>
 
@@ -38,8 +45,8 @@ const Navbar = () => {
         </div>
       </div>
 
-      {/* MAIN HEADER */}
-      <div style={{ backgroundColor: "#fd7e14" }}>
+      {/* ── MAIN HEADER + NAV (color changes with theme) ── */}
+      <div style={{ backgroundColor: themeColor.header, transition: "background-color 0.4s ease" }}>
         <div className="container py-3">
           <div className="row align-items-center text-center text-md-start g-3">
             <div className="col-4 col-md-1 mx-auto mx-md-0">
@@ -85,13 +92,13 @@ const Navbar = () => {
                     About Us
                   </a>
                   <ul className="dropdown-menu shadow">
-                    <li><Link className="dropdown-item" to="/about/vision-mission">Vision & Mission</Link></li>
+                    <li><Link className="dropdown-item" to="/about/vision-mission">Vision &amp; Mission</Link></li>
                     <li><Link className="dropdown-item" to="/about/desks-at-dte">Desks at DTE</Link></li>
                     <li><Link className="dropdown-item" to="/about/regional-offices">Regional Offices</Link></li>
                     <li><Link className="dropdown-item" to="/about/citizen-charter">Citizen Charter</Link></li>
                     <li><Link className="dropdown-item" to="/about/rti">RTI</Link></li>
                     <li><Link className="dropdown-item" to="/about/org-structure">Organizational Structure</Link></li>
-                    <li><Link className="dropdown-item" to="/about/whos-who">Who’s Who</Link></li>
+                    <li><Link className="dropdown-item" to="/about/whos-who">Who's Who</Link></li>
                   </ul>
                 </li>
 
@@ -159,7 +166,7 @@ const Navbar = () => {
           </div>
         </nav>
       </div>
-    </>
+    </div>
   );
 };
 
